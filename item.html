@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item - Cairo Bites</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-utensils"></i>
+                <span>Cairo Bites</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-btn">
+                    <i class="fas fa-home"></i> <span>Home</span>
+                </a>
+                <a href="menu.html" class="nav-btn">
+                    <i class="fas fa-bars"></i> <span>Menu</span>
+                </a>
+                <a href="checkout.html" class="nav-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                    <span>Cart</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <main class="container">
+        <a class="back-link" href="menu.html">← Back to Menu</a>
+        <div id="itemArea" class="item-container">
+            <!-- Item content will be rendered here -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cairo Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/classes.js"></script>
+    <script src="js/item.js"></script>
+</body>
+</html>

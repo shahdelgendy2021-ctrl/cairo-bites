@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cairo Bites</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-utensils"></i>
+                <span>Cairo Bites</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-btn">
+                    <i class="fas fa-home"></i> <span>Home</span>
+                </a>
+                <a href="menu.html" class="nav-btn active">
+                    <i class="fas fa-bars"></i> <span>Menu</span>
+                </a>
+                <a href="checkout.html" class="nav-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                    <span>Cart</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterMenu('all')">All</button>
+                    <button class="filter-btn" onclick="filterMenu('appetizers')">Appetizers</button>
+                    <button class="filter-btn" onclick="filterMenu('mainDishes')">Main Dishes</button>
+                    <button class="filter-btn" onclick="filterMenu('drinks')">Drinks</button>
+                    <button class="filter-btn" onclick="filterMenu('desserts')">Desserts</button>
+                </div>
+            </div>
+            
+            <!-- Appetizers Category -->
+            <div class="menu-category">
+                <h3 class="category-title">Appetizers</h3>
+                <div class="menu-scroll-container">
+                    <div class="menu-scroll appetizers-scroll" id="appetizersScroll">
+                        <!-- Cards will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Dishes Category -->
+            <div class="menu-category">
+                <h3 class="category-title">Main Dishes</h3>
+                <div class="menu-scroll-container">
+                    <div class="menu-scroll main-dishes-scroll" id="mainDishesScroll">
+                        <!-- Cards will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks Category -->
+            <div class="menu-category">
+                <h3 class="category-title">Drinks</h3>
+                <div class="menu-scroll-container">
+                    <div class="menu-scroll drinks-scroll" id="drinksScroll">
+                        <!-- Cards will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts Category -->
+            <div class="menu-category">
+                <h3 class="category-title">Desserts</h3>
+                <div class="menu-scroll-container">
+                    <div class="menu-scroll desserts-scroll" id="dessertsScroll">
+                        <!-- Cards will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-utensils"></i> Cairo Bites</h3>
+                    <p>Delicious traditional Egyptian cuisine served fresh daily. Experience the authentic flavors of Egypt in every bite.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="checkout.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+                        <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@cairobites.com</li>
+                        <li><i class="fas fa-clock"></i> Open Daily 10 AM - 11 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get special offers and updates</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email" id="newsletterInput">
+                        <button onclick="subscribeNewsletter()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cairo Bites. All rights reserved. Made with <i class="fas fa-heart"></i> in Egypt</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/classes.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
+
